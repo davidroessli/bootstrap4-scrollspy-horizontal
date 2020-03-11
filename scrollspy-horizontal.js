@@ -271,7 +271,7 @@
       var offsetLength = this._offsets.length;
 
       for (var i = offsetLength; i--;) {
-        var isActiveTarget = this._activeTarget !== this._targets[i] && scrollLeft >= this._offsets[i] && (typeof this._offsets[i + 1] === 'undefined' || scrollLeft < this._offsets[i + 1]);
+        var isActiveTarget = this._activeTarget !== this._targets[i] && scrollLeft >= this._offsets[i] && (typeof this._offsets[i + 1] === 'undefined' || scrollLeft <= this._offsets[i + 1]);
 
         if (isActiveTarget) {
           this._activate(this._targets[i]);
